@@ -58,8 +58,20 @@ document.addEventListener('DOMContentLoaded', function () {
     let expiry = document.getElementById('expiry').value.trim();
     let cvv = document.getElementById('cvv').value.trim();
 
+    const nameRegex = /^[A-Za-z\s]+$/;
+
     if (!fullName || !email || !address || !city || !cardName || !cardNumber || !expiry || !cvv) {
       alert('Please fill in all fields.');
+      return;
+    }
+
+    if (!nameRegex.test(fullName)) {
+      alert('Full Name should only contain letters and spaces.');
+      return;
+    }
+
+    if (!nameRegex.test(cardName)) {
+      alert('Cardholder Name should only contain letters and spaces.');
       return;
     }
 
@@ -125,3 +137,4 @@ document.addEventListener('DOMContentLoaded', function () {
     window.location.reload();
   });
 });
+

@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let month = parseInt(expiryParts[0], 10);
     let year = parseInt(expiryParts[1], 10);
 
-    if (isNaN(month) || isNaN(year)) {// If either of the values entered is not a valid number
+    if (isNaN(month) || isNaN(year)) {
       alert('Expiry date contains invalid numbers.');
       return;
     }
@@ -95,8 +95,13 @@ document.addEventListener('DOMContentLoaded', function () {
     let currentMonth = currentDate.getMonth() + 1;
     let currentYear = currentDate.getFullYear() % 100;
 
-    if (year < currentYear || (year === currentYear && month < currentMonth)) {
-      alert('Expiry date has already passed.');
+    if (year < currentYear) {
+      alert('Card already expired.');
+      return;
+    }
+
+    if (year === currentYear && month < currentMonth) {
+      alert('Card expired.');
       return;
     }
 

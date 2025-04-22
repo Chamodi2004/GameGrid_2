@@ -207,10 +207,16 @@ button.add-to-cart:hover {
   color: #f8f6f6;
 }
 
-/* Buy Now Button */
+.button-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+
 .buy-now {
-  display: block;
-  width: 20%;
   padding: 15px;
   background-color: #3f044b;
   color: white;
@@ -219,7 +225,6 @@ button.add-to-cart:hover {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 20px;
   transition: background-color 0.3s;
 }
 
@@ -231,34 +236,23 @@ button.add-to-cart:hover {
   outline: none; 
 }
 
-#add-to-favourite {
-  background-color: #ff4d4d; /* soft red */
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-#add-to-favourite:hover {
-  background-color: #e60000; /* darker red on hover */
-}
-#add-to-favourite, #apply-favourite {
+#add-to-favourite,
+#apply-favourite {
   background-color: #333;
-  color: white;
+  color: rgb(250, 250, 250);
   border: none;
   padding: 10px 15px;
-  margin: 5px;
-  cursor: pointer;
+  font-size: 16px;
   border-radius: 5px;
+  cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-#add-to-favourite:hover, #apply-favourite:hover {
-  background-color: #555;
+#add-to-favourite:hover,
+#apply-favourite:hover {
+  background-color: #0d1e69;
 }
+
 
 /* Footer */
 .footer {

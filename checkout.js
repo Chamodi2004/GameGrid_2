@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     if (!nameRegex.test(fullName)) {
-      alert('Full Name should only contain letters .');
+      alert('Full Name should only contain letters.');
       return;
     }
 
